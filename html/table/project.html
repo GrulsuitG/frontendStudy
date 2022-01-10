@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Table template</title>
+    <link href="minimal-table.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Planets data</h1>
+    <table>
+        <caption>
+            Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/"> Nasa's Planetary Fact Sheet - Metric</a>).
+        </caption>
+        <colgroup>
+            <col span="2">
+            <col style="border: 2px solid black;">
+            <col span="9"> 
+        </colgroup>
+        <thead>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+                <th id="name">Name</th>
+                <th id="mass">Mass (10<sup>24</sup>kg)</th>
+                <th id="diameter">Diameter (km)</th>
+                <th id="density">Density (kg/m<sup>3</sup>)</th>
+                <th id="gravity">Gravity (m/s<sup>2</sup>)</th>
+                <th id="lengthofday">Length of day (hours)</th>
+                <th id="distfromsun">Distance from Sun (10<sup>6</sup>km)</th>
+                <th id="temperature">Mean temperature (°C)</th>
+                <th id="numofmoon">Number of moons</th>
+                <th id="notes">Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th id="tp" rowspan="4" colspan="2">Terrestrial planets</th>
+                <th id="mercury" headers="name tp">Mercury</th>
+                <td headers="mass tp mercury">0.330</td>
+                <td headers="diameter tp mercury">4,879</td>
+                <td headers="density tp mercury">5427</td>
+                <td headers="gravity tp mercury">3.7</td>
+                <td headers="lengthofday tp mercury">4222.6</td>
+                <td headers="distfromsun tp mercury">57.9</td>
+                <td headers="temperature tp mercury">167</td>
+                <td headers="numofmoon tp mercury">0</td>
+                <td headers="notes tp mercury">Closet to the Sun</td>
+            </tr>
+            <tr>
+                <th id="venus" headers="name tp">Venus</th>
+                <td headers="mass tp venus">4.87</td>
+                <td headers="diameter tp venus">12,104</td>
+                <td headers="density tp venus">5243</td>
+                <td headers="gravity tp venus">3.7</td>
+                <td headers="lengthofday tp venus">2802.0</td>
+                <td headers="distfromsun tp venus">108.2</td>
+                <td headers="temperature tp venus">464</td>
+                <td headers="numofmoon tp venus">0</td>
+                <td headers="notes tp venus"></td>
+            </tr>
+            <tr>
+                <th id="earth" headers="name tp">Earth</th>
+                <td headers="mass tp earth">5.97</td>
+                <td headers="diameter tp earth">12,756</td>
+                <td headers="density tp earth">5514</td>
+                <td headers="gravity tp earth">9.8</td>
+                <td headers="lengthofday tp earth">24.0</td>
+                <td headers="distfromsun tp earth">149.6</td>
+                <td headers="temperature tp earth">15</td>
+                <td headers="numofmoon tp earth">1</td>
+                <td headers="notes tp earth">Our world</td>
+            </tr>
+            <tr>
+                <th id="mars" headers="name tp">Mars</th>
+                <td headers="mass tp mars">0.642</td>
+                <td headers="diameter tp mars">6,792</td>
+                <td headers="density tp mars">3933</td>
+                <td headers="gravity tp mars">3.7</td>
+                <td headers="lengthofday tp mars">24.7</td>
+                <td headers="distfromsun tp mars">227.9</td>
+                <td headers="temperature tp mars">-65</td>
+                <td headers="numofmoon tp mars">2</td>
+                <td headers="notes tp mars">The red planet</td>
+            </tr>
+            <tr>
+                <th id="jp" rowspan="4">Jovian planets</th>
+                <th id="gg" rowspan="2">Gas giants</th>
+                <th id="jupiter" headers="name jp gg">Jupiter</th>
+                <td headers="mass jp gg jupiter">1898</td>
+                <td headers="diameter jp gg jupiter">142,984</td>
+                <td headers="density jp gg jupiter">1326</td>
+                <td headers="gravity jp gg jupiter">23.1</td>
+                <td headers="lengthofday jp gg jupiter">9.9</td>
+                <td headers="distfromsun jp gg jupiter">778.6</td>
+                <td headers="temperature jp gg jupiter">-110</td>
+                <td headers="numofmoon jp gg jupiter">67</td>
+                <td headers="notes jp gg jupiter">The largest planet</td>
+            </tr>
+            <tr>
+                <th id="saturn" headers="name jp gg">Saturn</th>
+                <td headers="mass jp gg saturn">568</td>
+                <td headers="diameter jp gg saturn">120,536</td>
+                <td headers="density jp gg saturn">687</td>
+                <td headers="gravity jp gg saturn">9.0</td>
+                <td headers="lengthofday jp gg saturn">10.7</td>
+                <td headers="distfromsun jp gg saturn">1433.5</td>
+                <td headers="temperature jp gg saturn">-140</td>
+                <td headers="numofmoon jp gg saturn">62</td>
+                <td headers="notes jp gg saturn"></td>
+            </tr>
+            <tr>
+                <th id="ig" rowspan="2">Ice giants</th>
+                <th id="uranus" headers="name jp ig">Uranus</th>
+                <td headers="mass jp ig uranus">86.8</td>
+                <td headers="diameter jp ig uranus">51,118</td>
+                <td headers="density jp ig uranus">1271</td>
+                <td headers="gravity jp ig uranus">8.7</td>
+                <td headers="lengthofday jp ig uranus">17.2</td>
+                <td headers="distfromsun jp ig uranus">2872.5</td>
+                <td headers="temperature jp ig uranus">-195</td>
+                <td headers="numofmoon jp ig uranus">27</td>
+                <td headers="notes jp ig uranus"></td>
+            </tr>
+            <tr>
+                <th id="neptune" headers="name jp ig">Neptune</th>
+                <td headers="mass jp ig neptune">102</td>
+                <td headers="diameter jp ig neptune">49,528</td>
+                <td headers="density jp ig neptune">1638</td>
+                <td headers="gravity jp ig neptune">11.0</td>
+                <td headers="lengthofday jp ig neptune">16.1</td>
+                <td headers="distfromsun jp ig neptune">4495.1</td>
+                <td headers="temperature jp ig neptune">-200</td>
+                <td headers="numofmoon jp ig neptune">14</td>
+                <td headers="notes jp ig neptune"></td>
+            </tr>
+            <tr>
+                <th id="dp" colspan="2">Dwarf planets</th>
+                <th id="pluto" headers="name dp">Pluto</th>
+                <td headers="mass dp pluto">0.0146</td>
+                <td headers="diameter dp pluto">2,370</td>
+                <td headers="density dp pluto">2095</td>
+                <td headers="gravity dp pluto">0.7</td>
+                <td headers="lengthofday dp pluto">153.3</td>
+                <td headers="distfromsun dp pluto">5906.4</td>
+                <td headers="temperature dp pluto">-225</td>
+                <td headers="numofmoon dp pluto">5</td>
+                <td headers="notes dp pluto">Declassified as a planet in 2006, but this <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"> remains controversial</a>.</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+
+
+  </body>
+</html>
