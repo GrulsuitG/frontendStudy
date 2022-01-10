@@ -45,3 +45,8 @@ html 의 내용이 들어가는 부분
 > thead, tbody, tfoot 태그를 이용해 위치 지정 가능     
 > colgroup, rowgroup 태그를 통해 col별, row별 형식지정 가능    
 > colsapn, rowspan, span 태그를 통해 범위 지정 가능
+> id, header 등을 통해 위치 지정 가능 
+
+* list
+
+** unorder
