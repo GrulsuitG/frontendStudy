@@ -1,14 +1,28 @@
 html {
-    background-color: rgb(204, 20, 186);
-    font-size: 30px;
+    font-size: 10px;
+    font-family: placeholder;
+    background-color: coral;
   }
   
-  ul {
-    background: rgb(255, 255, 255);
-    padding: 10px;
-    border: 1px solid rgb(31, 12, 204);
+  body{
+    width: 600px;
+    margin: 0 auto;
+    background-color: darkgreen;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
   }
   
-  li {
-    margin-left: 20px;
+  h1{
+    margin: 0;
+    padding: 20px 0;
+    font-size: 60px;
+    text-align: center;
+    color: darkmagenta;
+    text-shadow: 3px 3px 1px black;
+  }
+  
+  p, li{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
   }
