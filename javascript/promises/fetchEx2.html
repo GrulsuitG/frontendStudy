@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+  </body>
+  <script>
+
+      function fetchAndDecode(url, type) {
+        return fetch(url).then(response => {
+          if (type === 'blob') {
+            return response.blob();
+          } else if (type === 'text') {
+            return response.text();
+          }
+        })
+        .catch(e => {
+          console.log('There has been a problem with your fetch operation: ' + e.message);
+        });
+      }
+
+      let coffee = fetchAndDecode('https://raw.githubusercontent.com/mdn/learning-area/main/javascript/asynchronous/promises/coffee.jpg', 'blob');
+      let tea = fetchAndDecode('https://raw.githubusercontent.com/mdn/learning-area/main/javascript/asynchronous/promises/tea.jpg', 'blob');
+      let txt = fetchAndDecode('https://raw.githubusercontent.com/mdn/learning-area/main/javascript/asynchronous/promises/description.txt', 'text')
+
+      Promise.all([coffee, tea, txt]).then(values =>{
+        console.log(values);
+        let URL1 = URL.createObjectURL(values[0]);
+        let URL2 = URL.createObjectURL(values[1]);
+        let descText = values[2];
+
+        let img1 = document.createElement('img');
+        let img2 = document.createElement('img');
+        img1.src = URL1;
+        img2.src = URL2;
+        document.body.appendChild(img1);
+        document.body.appendChild(img2);
+
+        let para = document.createElement('p');
+        para.textContent = descText;
+        document.body.appendChild(para);
+      });
+
+  </script>
+</html>
